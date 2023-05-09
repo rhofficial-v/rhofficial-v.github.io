@@ -59,16 +59,20 @@ function generateLoadingPage(){
     return loadpage;
 }
 
+document.addEventListener("DOMContentLoaded", function(){
+    // DOM Ready!
+    document.body.insertAdjacentElement("afterbegin",generateLoadingPage());
+});
+
 window.onload = function(){
     //create a loading page
-    document.body.insertAdjacentElement("afterbegin",generateLoadingPage());
 
     document.title = document.title + " - RH";
     
     //change emoji to twemoji
     try { twemoji.parse(document.body); }
     catch (error) { console.log(error) }
-    
+
     //call template
     loadTemplate();
 };
