@@ -64,7 +64,11 @@ window.onload = function(){
     document.body.insertAdjacentElement("afterbegin",generateLoadingPage());
 
     document.title = document.title + " - RH";
+    
+    //change emoji to twemoji
+    try { twemoji.parse(document.body); }
+    catch (error) { console.log(error) }
+    
     //call template
-    twemoji.parse(document.body);
     loadTemplate();
 };

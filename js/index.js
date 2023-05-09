@@ -20,9 +20,9 @@ function generateCards(json){
     json.forEach((element,index) => {
         template = copyTemplate(); //template will direct to old template that we make before. Always copy new template to make each card.
         template.getElementsByClassName("card-content")[0].innerHTML = 
-        "<p>" +element.title +"</p>"
-        +"<p>" +element.date +"</p>"
-        +"<p>" +element.content +"...</p>";
+        "<p class='w3-large'><b>" +element.title +"</b></p>"
+        +"<p class='w3-small w3-text-gray'>" +element.date +"</p>"
+        +"<p class='w3-text-gray'>" +element.content +"...</p>";
         template.getElementsByClassName("alink")[0].href = element.filepath;
 
         if(element.thumbnail){ template.getElementsByTagName("img")[0].setAttribute("src", element.thumbnail); }
