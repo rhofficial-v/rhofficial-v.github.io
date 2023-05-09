@@ -65,5 +65,6 @@ window.onload = function(){
 
     document.title = document.title + " - RH";
     //call template
-    loadTemplate()
+    twemoji.parse(document.body);
+    loadTemplate();
 };
