@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>RH - Website</title>
+        <!--創作に関する記事はここに書いています-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="./js/myfunc.js"></script>
+        <script src="./js/index.js"></script>
+        <style>
+            .divlink{
+                position: relative;
+                transition: transform 0.25s;
+            }
+
+            .divlink .alink{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .card-hover-anime:hover .divlink {
+                transform: scale(1.05);
+            }
+
+            .square-img-container {
+                display: flex;
+                flex-wrap: wrap;
+                aspect-ratio: 16/9;
+            }
+            .square-img-container .square-img {
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <!--header-->
+        <!--sidebar on phone-->
+        <!--button-->
+        <div class="w3-top">
+            <a href="javascript:void(0)" class="w3-button w3-left w3-hide-large w3-hide-medium" onclick="openSidebar()">&#9776;</a>
+        </div>
+        <!--menu and overlay-->
+        <div id="mySidebar" class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:500">
+            <button class="w3-bar-item w3-button" onclick="closeSidebar()">Close &times;</button>
+            <a href="javascript:alert('Coming Soon');" class="w3-bar-item w3-button">About</a>
+            <a href="javascript:alert('Coming Soon');" class="w3-bar-item w3-button">Works</a>
+            <a href="javascript:alert('Coming Soon');" class="w3-bar-item w3-button">Contact</a>
+        </div>
+        <div id="sidebar_overlay" class="w3-overlay w3-animate-opacity" onclick="closeSidebar()" style="cursor:pointer"></div>
+
+        <!--content-->
+        <!--top-->
+        <div class="w3-display-container w3-teal background" style="height:70%;min-height: 255px;">
+            <div class="w3-display-bottomleft" style="height:58%">
+                <h1>RH</h6>
+                <p>創作に関する記事はここに書いています</p>
+            </div>
+            <div class="w3-display-bottommiddle" style="width:100%">
+                <!--Navigation-->
+                <div class="w3-row">
+                    <div class="w3-container w3-col l2 m1"><!--For Margin--></div>
+                    <div class="w3-container w3-col l8 m10">
+                        <div class="w3-bar">
+                            <a href="javascript:alert('Coming Soon');" class="w3-bar-item w3-button w3-border-gray w3-border-right w3-hover-text-blue w3-hide-small" style="width:33%">About</a>
+                            <a href="javascript:alert('Coming Soon');" class="w3-bar-item w3-button w3-border-gray w3-border-left w3-border-right w3-hover-text-blue w3-hide-small" style="width:33%">Works</a>
+                            <a href="javascript:alert('Coming Soon');" class="w3-bar-item w3-button w3-border-gray w3-border-left w3-hover-text-blue w3-hide-small" style="width:33%">Contact</a>
+                        </div>
+                    </div>
+                    <div class="w3-container w3-col l2 m1"><!--For Margin--></div>
+                </div>
+            </div>
+        </div>
+
+        <!--main-->
+        <div class="w3-row w3-padding-16">
+            <div class="w3-container w3-col l2 m1"><!--For Margin--></div>
+            <div class="w3-container w3-col l8 m10">
+                <div id="content_container" class="w3-row">
+
+                    <!--test article-->
+                    <div class="w3-container w3-padding-16 w3-col m6 w3-hide">
+                        <div class="w3-card-4 w3-round-large w3-white divlink">
+                            <div class="w3-display-container w3-text-white">
+                                <img class="w3-round-large" src="./image/img_london.jpg" style="width:100%">
+                            </div>
+                            <div class="w3-container">
+                                <p>TEST</p>
+                                <p>2023-05-06</p>
+                                <p>THE TEST ARTICLE</p>
+                            </div>
+                            <!--link to article-->
+                            <a class="alink" href="./article/20230506-1.html"></a>
+                        </div>
+                    </div>
+
+                    <!--template-->
+                    <div id="card_template" class="w3-container w3-padding-16 w3-col m6 w3-hide card-hover-anime w3-animate-bottom">
+                        <div class="w3-card-4 w3-round-large w3-white divlink">
+                            <div class="square-img-container">
+                                <img class="w3-round-large square-img" src="./image/img_london.jpg" style="width:100%">
+                            </div>
+                            <div class="w3-container card-content">
+                                <p>title</p>
+                                <p>2023-05-08</p>
+                                <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore......</p>
+                            </div>
+                            <!--link to article-->
+                            <a class="alink" href="javascript:alert('Coming Soon')"></a>
+                        </div>
+                    </div>
+                    
+                    <!--template end-->
+
+                    
+                </div>
+            </div>
+            <div class="w3-container w3-col l2 m1"><!--For Margin--></div>
+        </div>
+
+        <!--footer-->
+        <div class="w3-container w3-teal w3-center">
+            <div class="">footer</div>
+        </div>
+    </body>
+</html>

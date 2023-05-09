@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="../js/myfunc.js"></script>
+        <script src="../js/article.js"></script>
+        <style>
+            .divlink{
+                position: relative;
+            }
+
+            .divlink .alink{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <!--header-->
+        <!--navigation bar-->
+        <div class="w3-bar w3-light-gray w3-card-2">
+            <!--show on mid large screen-->
+            <a class="w3-bar-item w3-button w3-black w3-text-white w3-hover-gray w3-hide-small" href="../index.html">RH</a>
+            <a class="w3-bar-item w3-button w3-hover-gray w3-hide-small" href="javascript:alert('Coming Soon');">About</a>
+            <a class="w3-bar-item w3-button w3-hover-gray w3-hide-small" href="javascript:alert('Coming Soon');">Works</a>
+            <a class="w3-bar-item w3-button w3-hover-gray w3-hide-small" href="javascript:alert('Coming Soon');">Contact</a>
+
+            <!--padding on phone-->
+            <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium" href="javascript:void(0)">:</a>
+        </div>
+        <!--sidebar on phone-->
+        <div class="w3-top w3-center w3-black w3-card-2">
+            <!--show on phone-->
+            <a href="javascript:void(0)" class="w3-button w3-left w3-hide-large w3-hide-medium" onclick="openSidebar()">&#9776;</a>
+            <a class="w3-button w3-hover-gray w3-hide-large w3-hide-medium" href="../index.html">RH</a>
+        </div>
+        <!--menu and overlay-->
+        <div id="mySidebar" class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:500">
+            <button class="w3-bar-item w3-button" onclick="closeSidebar()">Close &times;</button>
+            <a href="javascript:alert('Coming Soon');" class="w3-bar-item w3-button">About</a>
+            <a href="javascript:alert('Coming Soon');" class="w3-bar-item w3-button">Works</a>
+            <a href="javascript:alert('Coming Soon');" class="w3-bar-item w3-button">Contact</a>
+        </div>
+        <div id="sidebar_overlay" class="w3-overlay w3-animate-opacity" onclick="closeSidebar()" style="cursor:pointer"></div>
+        <!--header end-->
+
+        <!--main-->
+        <div class="w3-row w3-padding-16" style="min-height: 100%;">
+            <div class="w3-container w3-col l2 m1"><!--For Margin--></div>
+            <div class="w3-container w3-col l8 m10 w3-border w3-border-yellow">
+                <!--article thumbnail-->
+                <img id="article_thumbnail" src="" style="display: none;">
+                <!--article title-->
+                <div id="article_title" class="w3-container">
+                </div>
+                <!--article date-->
+                <div id="article_date" class="w3-container">
+                    <!--YYYY-MM-DD-->
+                </div>
+                <hr>
+                <!--article content-->
+                <div id="article_content" class="w3-container">
+                </div>
+            </div>
+            <div class="w3-container w3-col l2 m1"><!--For Margin--></div>
+        </div>
+
+        <!--footer-->
+        <div class="w3-container w3-teal w3-center">
+            <div class="">footer</div>
+        </div>
+    </body>
+</html>
