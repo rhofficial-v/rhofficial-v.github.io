@@ -61,6 +61,8 @@ function generateLoadingPage(){
 
 document.addEventListener("DOMContentLoaded", function(){
     // DOM Ready!
+
+    //render loaging page
     document.body.insertAdjacentElement("afterbegin",generateLoadingPage());
 });
 
